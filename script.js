@@ -29,4 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  const serviceCards = document.querySelectorAll('.services-grid .card');
+
+  const equalizeServiceCardHeights = () => {
+    if (!serviceCards.length) {
+      return;
+    }
+
+    serviceCards.forEach((card) => {
+      card.style.height = '';
+    });
+
+    const shouldMatchHeights = window.matchMedia('(min-width: 901px)').matches;
+    if (!shouldMatchHeights) {
+      return;
+    }
+
+    const tallest = Math.max(...Array.from(serviceCards, (card) => card.offsetHeight));
+    serviceCards.forEach((card) => {
+      card.style.height = `${tallest}px`;
+    });
+  };
+
+  equalizeServiceCardHeights();
+  window.addEventListener('resize', () => {
+    window.requestAnimationFrame(equalizeServiceCardHeights);
+  });
+  window.addEventListener('load', equalizeServiceCardHeights);
 });
