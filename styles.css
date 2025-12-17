@@ -85,6 +85,13 @@ ul {
   height: 50px;
 }
 
+.site-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .site-nav ul {
   display: flex;
   gap: 1rem;
@@ -99,13 +106,24 @@ ul {
   display: none;
   background: none;
   border: none;
+  padding: 0.35rem;
+  margin-left: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
 }
 
 .nav-toggle-bar {
-  width: 26px;
+  display: block;
+  width: 24px;
   height: 2px;
-  background: #fff;
-  margin: 5px 0;
+  background: currentColor;
+  margin: 4px 0;
+  border-radius: 999px;
 }
 
 .btn {
