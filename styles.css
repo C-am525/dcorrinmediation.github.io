@@ -304,14 +304,15 @@ ul {
 
 .about-photo {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .about-photo img {
   width: 100%;
-  max-width: 640px;
+  max-width: 520px;
   border-radius: 28px;
   box-shadow: 0 30px 50px rgba(10, 16, 43, 0.2);
+  object-fit: cover;
 }
 
 .blue-panel {
