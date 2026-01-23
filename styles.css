@@ -673,4 +673,18 @@ textarea {
   .calendar-frame iframe {
     min-height: 420px;
   }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: left;
+  }
+
+  .footer-grid ul {
+    justify-self: start;
+  }
+
+  .footer-disclaimer {
+    max-width: none;
+  }
 }
